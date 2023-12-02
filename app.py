@@ -25,5 +25,9 @@ database.load_car_list_to_database(asseto_corsa_competizione_cars, 'Asseto Corsa
 
 scraper.open_url('https://www.gran-turismo.com/us/products/gtsport/carlist/')
 gran_turismo_sport_cars = scraper.get_gran_turismo_sport_car_names('carlist_table')
-scraper.close_url()
 database.load_car_list_to_database(gran_turismo_sport_cars, 'Gran Turismo Sport')
+
+scraper.open_url('https://coachdaveacademy.com/tutorials/rfactor-car-list/')
+rfactor2_cars = scraper.get_rfactor2_car_names('elementor-toc__list-wrapper')
+scraper.close_url()
+database.load_car_list_to_database(rfactor2_cars, 'rFactor 2')

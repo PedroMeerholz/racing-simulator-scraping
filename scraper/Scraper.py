@@ -37,5 +37,18 @@ class Scraper:
             car_names.append(car_name)
         return car_names
 
+    def get_rfactor2_car_names(self, class_name: str):
+        table = self.get_car_element_list(class_name)[0]
+        table_rows = table.find_elements(by=By.TAG_NAME, value='li')
+        car_names = []
+        for row in table_rows:
+            row_sublist = row.find_elements(by=By.TAG_NAME, value='ol')
+            for sublist in row_sublist:
+                car_sublist = sublist.find_elements(by=By.TAG_NAME, value='a')
+                for car in car_sublist:
+                    car_name = car.accessible_name
+                    car_names.append(car_name)
+        return car_names
+
     def close_url(self):
         self.driver.quit()
