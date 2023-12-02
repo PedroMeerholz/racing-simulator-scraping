@@ -1,4 +1,4 @@
-from scraper.Scraper import Scraper
+from scraper.CarScraper import Scraper
 from database.Database import Database
 
 database = Database()

@@ -1,6 +1,7 @@
 # Racing Simulator Scraping
+### Última atualização do scraping: 02/12/2023
 
-Scraping dos carros disponíveis nos seguintes simuladores:
+Scraping dos nomes dos carros e pistas disponíveis nos seguintes simuladores:
 * iRacing
 * Asseto Corsa
 * Asseto Corsa Competizione
